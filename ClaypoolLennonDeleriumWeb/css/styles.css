@@ -1,0 +1,831 @@
+* { 
+margin: 0; 
+padding: 0; 
+} /* Sets any default padding and margins to 0. This was to solve the footer problem. */
+
+/* BODY, FONTS AND GENERAL */
+body {
+  background: url("../images/lenclay.jpg") #9a6e92; /* Image source: https://www.npr.org/2019/03/05/698106206/the-claypool-lennon-delirium-balances-a-classic-sound-with-light-madness?t=1614283625988 */
+  background-size: cover;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;  
+  font-family: calibri;
+}
+
+body img {
+	height: auto;
+	border-radius:2%;
+}
+
+h1 {	
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: calibri;
+  font-size: 16px;
+  color: black;
+}
+
+a {
+	color:blue;
+}
+
+#wrapper, #basketwrapper {
+	background-color: black;
+	opacity: 0.05;
+	margin-left: 10%;
+	margin-right: 10%;
+	position: fixed;
+	top: 18%;
+	bottom: 18%;
+	padding: 2%;
+	overflow-y:scroll;
+	overflow-x: hidden;
+	box-shadow: 0 0 45px silver;
+	border-radius: 20px;
+	border: 2px solid black;
+	width:75%;
+}
+
+#wrapper *, #basketwrapper * {
+	color: white;
+	opacity:1;
+}
+
+.block {
+	display:inline-block;
+}
+
+/* Nav bar */
+.navbar, .footbar {
+	background-color: rgba(0, 0, 0, 0.5); /* using rgba (a for alpha) enables me to keep text at full opacity at all times */
+	width: 100%;
+	margin: 0%;
+	position: fixed;
+	height: 12%;
+	overflow: hidden;	
+}
+
+.navbar a, .footbar a {
+	color: rgb(255, 255, 255, 1);
+	font-size: 30px;
+	position: inherit;
+	text-decoration: none;
+	opacity:1;
+	text-shadow: 4px 4px 3px black;
+}
+
+.navbar li, .footbar li {
+	float: left;
+	margin-left: 5%;
+	border-width: 1px;
+	top: 10%;
+	margin-top:1.5%;
+	position: relative;
+	list-style-type: none; 
+	left: 15%;
+	width: 3%;
+	opacity:0.9;	
+} 
+
+.navbar li:last-child {
+	margin-left:6%;
+} /* The Instagram element keeps overlapping, so the Twitter (last child) element needs a bit extra spacing than the rest. */
+
+/* FOOTER BAR */
+.footbar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 10%;	
+}
+
+.footbar li {
+	float: left;
+}
+
+.footbar img {
+	position: fixed;
+	left: 17%;
+	bottom: 1.5%;
+	height: 7%;
+	opacity:0.5;
+}
+
+/* LAYOUT SECTIONS HOME */
+
+.newscontainer {
+	position:relative;
+	display:inline-block;
+	width:40%;
+	height:50%;
+	border:solid silver 0px;
+	box-shadow: 0 0 10px silver;
+	border-radius:20px;	
+	margin-left:5%;
+	margin-top:5%;
+}
+
+.wrapperimageleft {
+	height: 80%;
+	width: 40%;
+	float:left;
+	overflow:hidden;
+	position:absolute;
+	margin-left: 25px;
+	margin-top:5%;
+	margin-bottom:5%;	
+	border:solid black 1px;
+}
+
+.wrapperimageleft h3 {
+	color: pink;
+	opacity:1;
+}
+
+.newsbox {
+	height: 70%;
+	width: 40%;
+	border:solid black 1px;	
+	margin-left:50%;
+	margin-right:2%;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	position: relative;
+	float:left;
+	margin-top:5%;
+	border-radius:20px;	
+	padding-left:2%;
+	padding-right:2%;
+}
+
+.newsbox p {
+	font-size:13px;
+	padding:5px;
+}
+
+/* LAYOUT SECTIONS ABOUT */
+#aboutarticle {
+	width: 75%;
+	margin-left: 12.5%;
+}
+
+#aboutarticle p {
+	margin-top:20px;
+}
+
+#aboutarticle iframe {
+	margin-top:100px;
+	margin-bottom:100px;
+}
+
+#aboutimage img {
+	margin-top:50px;
+	margin-bottom: 10px;
+	margin-left:20%;
+	width:60%;
+	border-radius: 10px;
+	box-shadow:0 0 20px blue;
+}
+
+#aboutimage h5 {
+	margin-left:20%;
+}
+
+/* LAYOUT SECTIONS TOUR*/
+
+.tourbody {
+	background-color: black;
+	opacity: 0.9;
+	position: fixed;
+	top: 18%;
+	bottom: 18%;
+	padding: 2%;
+	overflow: scroll;
+	overflow-x: hidden;
+	box-shadow: 0 0 45px silver;
+	border: 2px solid black;
+	width:100%;
+}
+
+.tourbody h1, .tourbody h2, .tourbody h3, .tourbody p {
+	color:white;
+	position:fixed;
+	left:45%;	
+}
+
+.tourbody p {
+	top:29%;
+	left:32%;
+}
+
+.tourbox {
+	background-color:black;
+	width:80%;
+	height:40%;
+	position:fixed;
+	left: 8%;
+	top:35%;
+	overflow-y:scroll;	
+	overflow-x:hidden;
+	border-radius:10px;	
+}
+
+.tourbox ul {
+	position:relative;
+	color:white;
+	font-size:20px;
+	margin-left:30%;
+	margin-top:3%;
+	list-style-type: none; 
+}
+
+.tourbox li {
+	margin-top:2%;
+}
+
+.tourbox h2 {
+	position: relative;
+	left: 30%;
+}
+
+/* LAYOUT SECTIONS MERCH */
+
+.merchitem {
+	height: 70%;
+	width: 30%;
+	float:left;
+	overflow-y:scroll;
+	position:relative;
+	margin-left: 25px;
+	margin-top:2%;
+	margin-bottom:2%;
+	border-radius:10%;
+}
+
+.merchitem h3 {
+	margin:5%;
+	font-size:20px;
+	z-index:2;
+}
+
+.merchitem a {
+	color:white;
+}
+
+.merchitem img, .wrapperimageleft img {
+	width: 60%;
+	height:auto;
+	position:relative;
+	left:0%;
+	margin-left:0%;
+	padding-left:0%;
+}
+
+/* LAYOUT SECTIONS BASKET */
+
+.basketitem {
+	height: 70%;
+	width: 50%;
+	float:left;
+	overflow-y:scroll;
+	position:relative;
+	margin-left: 20%;
+	margin-top:2%;
+	margin-bottom:12%;
+	border-radius:3%;
+}
+
+.basket img {
+	width: auto;
+	height:auto;
+	position:relative;
+	left:0%;
+	margin-left:0%;
+	padding-left:0%;
+}
+
+.basketitem::after {
+	content: "Amount in basket: 1";
+	background-color:black;
+	color:pink;
+	margin-left: 10%;
+}
+
+#total {
+	display:block;
+	width:70%;
+	left:14%;
+	background:pink;
+	position:fixed;
+	bottom:20%;
+}
+
+#total h1 {
+	margin-left:-40%;
+	color:black;
+}
+
+/* LAYOUT SECTIONS MERCH DETAILS */
+
+#merchdetails {
+	background:black;
+	background-size:cover;
+	width:100%;
+	height:100%;
+	background-image:none;
+	color:white;
+}
+
+#merchdetails * {
+	color:white;
+}
+#merchdetails h1 {
+	position:absolute;
+	left:40%;
+	top:5%;
+}
+
+#merchdetails ul {
+	color:white;
+	position:absolute;
+	top:57%;
+	left:40%;	
+}
+
+#merchdetails img {
+	position: absolute;
+	top:15%;
+	left:35%;
+	height:30%;
+	width:auto;
+	margin:5%;
+}
+
+/* SHAPES AND BUTTONS */ 
+
+.buybutton {
+	width:6%;
+	height:5%;
+	position: absolute;
+	bottom:10%;
+	left:35%;
+	margin-left:3%;
+}
+
+a.buybutton {
+	color:black !important;
+	text-decoration:none;
+	background-color:silver;
+	padding:1%;
+	padding-left:2%;
+	font-size:1.3em;
+	background-image: linear-gradient(to bottom, gray, silver, gray);
+	border-radius:6%;
+	opacity:0.6;
+	margin-top:10px;
+}
+
+/* PSEUDO CLASSES */
+
+#wrapper:hover, #basketwrapper:hover {
+	opacity: 0.9;
+	transition: 1s;	
+}
+
+.navbar:hover {
+	background-color: black;
+	opacity:0.9;
+	transition: 1s;
+}
+
+.navbar li a:hover {
+	border-color: gold;
+	background-image: linear-gradient(to bottom right, #654062, gray, #654062); /* gradient colors for buttons:hover*/
+	border-style: solid;
+	border-radius: 10px;
+	border-width:1.5px;
+	box-shadow: 0 0 25px gold;
+	background-color:purple;
+	padding: 10px;
+	transition: 0.3s;
+	opacity: 1;
+}
+
+.footbar img:hover {
+	opacity:1;
+	transform: scale(1.2);
+	transition: 2s;
+}
+
+.newsbox:hover {
+	box-shadow: 0 0 5px silver;
+	transition: 0.5s;
+	transform:scale(2, 2.8);
+	position:relative;
+	background-color:black;
+	border-radius:3%;
+	opacity:1;
+	z-index:1;
+}
+
+.newsbox:hover p {
+	font-size:6px;
+	opacity:1;
+}
+
+#aboutimage img:hover {
+	box-shadow: 0 0 100px blue;
+	transition: 2s ease-in-out;
+}
+
+a.buybutton:hover {
+	opacity:1;
+}
+
+/* MEDIA QUERIES */
+
+/* Max-widths */
+@media only screen and (max-width: 1600px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 7%;
+		top: 10%;
+		margin-top:1.5%;
+		left: 10%;
+		width: 1%;		
+	} 
+	
+	.footbar img {
+		left:17%;
+	}
+}
+
+@media only screen and (max-width: 1290px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 10%;	
+		margin-top:2%;
+		left:2%;
+	} 
+	
+	.footbar img {
+		left:10%;
+	}
+	
+	.newsbox *, .newsbox p {
+		font-size: 5px;
+	}
+	
+	.newsbox:hover {
+		transform:scale(2, 2.4);
+	}
+	
+	.newsbox p {
+		font-size:12px;
+		opacity:1;
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 10%;
+		margin-top:2.5%;		
+		left:3%;
+	} 
+	
+	.footbar img {
+		left:10%;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 10%;	
+		left:2.5%;
+	} 
+	
+	.navbar a, .footbar a {
+		font-size: 22px;
+	}	 
+	
+	.footbar img {
+		left:8%;
+	}
+	
+	.navbar li:last-child {
+		margin-left:7%;
+	}
+	
+	.newscontainer {
+	position:relative;
+	display:inline-block;
+	width:80%;
+	height:50%;
+	margin-left:5%;
+	margin-top:5%;
+	}
+	
+	.newsbox:hover {
+		transform:scale(1.8, 2.1);
+	}
+	
+	.newsbox p {
+		font-size:12px;
+		opacity:1;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 9%;		
+		left:3%;
+		margin-top:3.5%;
+	} 
+	
+	.navbar a, .footbar a {
+		font-size: 21px;
+	}	 
+	
+	.footbar img {
+		left:8%;
+	}
+	
+	.navbar li:last-child {
+		margin-left:7%;
+	}
+	
+	.navbar li a:hover {
+		padding: 5px;
+		box-shadow: 0 0 10px gold;
+
+	}
+	
+	.newsbox:hover {
+		transform:scale(2, 1.7);
+	}
+	
+	.newsbox:hover p {
+		font-size:9px;
+		margin:5px;
+	}
+	
+	.newsbox p {
+		font-size:15px;
+		opacity:1;
+	}
+	
+	#aboutarticle {
+		width: 85%;
+		margin-left: 7.5%;
+	}
+
+	#aboutarticle p {
+		font-size:16px;
+	}
+
+	#aboutarticle iframe {
+		margin-top:50px;
+		margin-bottom:50px;
+		width:90%;
+	}
+	
+	.merchitem {
+		margin:5%;
+		height: 40%;
+		width: 30%;
+	}
+	
+	#h2merch {
+		margin:5%;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 12%;		
+		left:-4%;
+		margin-top:5.5%;
+	} 
+	
+	.navbar a, .footbar a {
+		font-size: 16px;
+	}	 
+	
+	.footbar img {
+		left:2%;
+	}
+	
+	.navbar li:last-child {
+		margin-left:7%;
+	}
+	
+	.newsbox:hover {
+		transform:scale(2, 1.7);
+	}
+	
+	.newsbox:hover p {
+		font-size:6px;
+		margin:0.5px;
+	}
+	
+	.newsbox p {
+		font-size:15px;
+		opacity:1;
+	}
+	
+	.tourbox * {
+		font-size:16px;
+	}
+	
+	a.buybutton {
+		font-size:0.8em;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 12%;		
+		left:-6%;
+		margin-top:6%;
+	} 
+	
+	.navbar a, .footbar a {
+		font-size: 16px;
+	}	 
+	
+	.footbar img {
+		left:1%;
+	}
+	
+	.navbar li a:hover {
+		padding: 5px;
+		padding-top:300%;
+		padding-bottom:300%;
+		box-shadow: 0 0 10px gold;
+	}
+	
+	.tourbox * {
+		font-size:16px;
+	}
+	
+	.tourbox ul, .tourbox h2, .tourbox p {
+		margin-left:0;
+		left:2%;
+	}	
+	
+	a.buybutton {
+		font-size:0.7em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 2%;		
+		left:0%;
+		margin-top:5%;
+		margin-bottom:2%;
+		position:relative;
+		border:gold solid 1px;
+		width:8%;
+		padding:1.5%;
+		padding-top:3%;
+		background-image: linear-gradient(to bottom right, #654062, gray, #654062);
+		border-radius:8%;
+		box-shadow: 0 0 10px gold;
+	} 
+	
+	.navbar li a:hover, .footbar li {
+		background-color: transparent; 
+		text-decoration: none;
+		border:none;
+		background:none;
+		box-shadow:none;
+		padding:0;
+		margin:0;
+	}
+	
+	.navbar a, .footbar a {
+		font-size: 10px;
+		text-shadow: 2px 2px 1px black;		
+	}	 
+	
+	.footbar img {
+		left:1%;
+	}
+	
+	.navbar li:last-child {
+		margin-left:2%;
+	}
+	
+	.newscontainer {
+		position:relative;
+		display:inline-block;
+		width:90%;
+		height:50%;
+		margin-left:5%;
+		margin-top:5%;
+	}	
+	
+	.newsbox:hover {
+		transform:scale(1.4, 1.7);
+	}
+	
+	.newsbox:hover p {
+		font-size:10px;
+		margin:0.5px;
+	}
+	
+	.newsbox p {
+		font-size:13px;
+	}
+	
+	.newsbox, .wrapperimageleft {
+		height: 75%;
+		width: 35%;
+		
+	}
+	
+	#h2merch, #wrapper h1, #basketwrapper h1 {
+		font-size:15px;
+	}
+	
+	.merchitem h3 {
+		font-size:15px;
+	}	
+}
+
+
+@media only screen and (max-width: 350px) {
+	
+	.navbar li, .footbar li {
+		margin-left: 2%;		
+		left:0%;
+		margin-top:6.5%;
+		width:8%;
+		padding:1.5%;
+	} 
+	
+	.navbar a, .footbar a {
+		font-size: 8px;
+	}	 
+	
+	.footbar img {
+		left:1%;
+	}
+	
+	.navbar li:last-child {
+		margin-left:2%;
+	}
+	
+	.navbar li a:hover {
+		
+	}
+	
+	.tourbox * {
+		font-size:12px;
+	}
+}
+
+/* Max-heights */
+
+@media only screen and (max-height: 420px) {
+	
+	.navbar li, .footbar li {
+		margin-top:2%;
+	} 
+	
+	.navbar a, .footbar a {
+		font-size: 14px;
+	}	 
+	
+	.footbar img {
+		left:12%;
+	}
+}
+
+@media only screen and (max-height: 320px) {
+	
+	.navbar li, .footbar li {
+		margin-top:1%;
+	} 
+	
+	.footbar img {
+		left:12%;
+	}
+}
+
+
+
+
